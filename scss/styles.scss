@@ -13,29 +13,27 @@
 /*
     File Contents:
 
-        1. Variables
-        2. Mixins
-        3. Global Styles
-        4. Lead Styles
-        5. About Styles
-        6. Experience Styles
-        7. Education Styles
-        8. Project Styles
-        9. Skills Styles
-        10. Contact Styles
-        11. Optional Section Styles
-        12. Media Queries
+        Variables
+        Mixins
+        Global Styles
+        Lead Styles
+        About Styles
+        Experience Styles
+        Education Styles
+        Project Styles
+        Skills Styles
+        Media Queries
 */
 
 /*
     ------------------------
-    ----- 1. Variables -----
+    Variables -----
     ------------------------
 */
 
 // Define base and accent colors
-$base-color: #3498db;
-$base-color-hover: darken($base-color, 10%);
+$base-color: #F2B544;
+$base-color-hover: darken($base-color, 20%);
 
 // Define background colors
 $background: #fff;
@@ -50,7 +48,7 @@ $text: #74808a;
 
 /*
     ---------------------
-    ----- 2. Mixins -----
+    Mixins -----
     ---------------------
 */
 
@@ -80,7 +78,7 @@ $text: #74808a;
 
 /*
     ----------------------------
-    ----- 3. Global Styles -----
+    Global Styles -----
     ----------------------------
 */
 
@@ -237,6 +235,7 @@ header {
 
 footer {
     padding: 50px 0;
+    background: $background-alt;
 }
 
 .copyright {
@@ -341,7 +340,7 @@ footer {
 
 /*
     --------------------------
-    ----- 4. Lead Styles -----
+    Lead Styles -----
     --------------------------
 */
 
@@ -350,7 +349,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/sunset.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -441,7 +440,7 @@ footer {
 
 /*
     ---------------------------
-    ----- 5. About Styles -----
+    About Styles -----
     ---------------------------
 */
 
@@ -461,7 +460,7 @@ footer {
 
 /*
     --------------------------------
-    ----- 6. Experience Styles -----
+    Experience Styles -----
     --------------------------------
 */
 
@@ -472,6 +471,11 @@ footer {
 
     h2 {
         color: $heading;
+    }
+
+    img {
+        max-height: 65px;
+        max-width: 65px;
     }
 }
 
@@ -572,7 +576,7 @@ footer {
 
 /*
     -------------------------------
-    ----- 7. Education Styles -----
+    Education Styles -----
     -------------------------------
 */
 
@@ -626,7 +630,7 @@ footer {
 
 /*
     -------------------------------
-    ----- 8. Project Styles -----
+    Project Styles -----
     -------------------------------
 */
 
@@ -652,6 +656,13 @@ footer {
 
 .project-image {
     float: left;
+    max-height: 300px;
+    max-width: 300px;
+    img {
+        height: 300px;
+        width: 300px;
+        object-fit: contain;
+    }
 }
 
 .project-info {
@@ -690,17 +701,20 @@ footer {
 
 /*
     -------------------------------
-    ----- 9. Skills Styles -----
+    Skills Styles -----
     -------------------------------
 */
 
 #skills {
+    background: $base-color;
     padding: 50px 15px;
     text-align: center;
 
+
     h2 {
-        color: $heading;
-        margin-bottom: 50px;
+        margin: 0 0 15px 0;
+        color: #fff;
+        font-weight: 500;
     }
 
     ul {
@@ -714,130 +728,18 @@ footer {
         display: inline-block;
         margin: 7px;
         padding: 5px 10px;
-        color: $heading;
-        background: darken($background-alt, 5%);
+        background: darken($base-color, 15%);
         list-style: none;
         cursor: default;
         font-size: 1.2em;
-    }
-}
-
-/*
-    -------------------------------
-    ----- 10. Contact Styles -----
-    -------------------------------
-*/
-
-#contact {
-    padding: 50px 15px;
-    background: $base-color;
-    text-align: center;
-
-    h2 {
-        margin: 0 0 15px 0;
         color: #fff;
-        font-weight: 500;
     }
 }
 
-#contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-
-    input, textarea {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        border-radius: 4px;
-        border: none;
-        margin-bottom: 10px;
-        background: darken($base-color, 15%);
-        color: #fff;
-        @include transition();
-        @include placeholder {
-            color: #fff;
-        }
-
-        &:focus {
-            outline: none;
-            background: darken($base-color, 25%);
-        }
-    }
-
-    textarea {
-        height: 150px;
-        resize: none;
-    }
-
-    button {
-        display: block;
-        width: 100%;
-        background: #fff;
-        border-radius: 4px;
-        padding: 5px 10px;
-        border: none;
-        color: $base-color;
-        font-weight: 700;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        @include transition();
-
-        &:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-        }
-    }
-}
-
-/*
-    ---------------------------------------
-    ----- 11. Optional Section Styles -----
-    ---------------------------------------
-*/
-
-.optional-section {
-    padding: 50px 15px;
-    text-align: center;
-    border-top: 1px solid $border;
-
-    h2 {
-        color: $heading;
-    }
-}
-
-.optional-section-block {
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    padding: 15px;
-    border: 1px solid $border;
-    background: #fff;
-    text-align: left;
-
-    h3 {
-        font-weight: 500;
-        margin: 0 0 15px 0;
-        color: $heading;
-    }
-
-    h4 {
-        color: $text;
-        clear: both;
-        font-weight: 500;
-        margin: 0 0 15px 0;
-    }
-
-    p, ul {
-        margin: 0 0 15px 0;
-        color: $text;
-        font-size: 0.9em;
-    }
-
-    ul {
-        padding: 0 0 0 15px;
-    }
-}
 
 /*
     -----------------------------
-    ----- 12. Media Queries -----
+    Media Queries -----
     -----------------------------
 */
 
