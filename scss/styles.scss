@@ -239,6 +239,16 @@ footer {
   background: $background-alt;
 }
 
+.copyrighted {
+  text-decoration: none;
+  color: #74808a;
+}
+
+.copyrighted:hover {
+  color: #74808a;
+  text-decoration: none;
+}
+
 .copyright {
   padding-top: 20px;
 
@@ -672,23 +682,23 @@ footer {
 .project-image-1 {
   background-image: linear-gradient(#f2b544c4, #c2830eba),
     url(/images/project_website.gif);
-    height: 300px;
-    width: 300px;
-    background-size: 300px;
+  height: 300px;
+  width: 300px;
+  background-size: 300px;
 }
 .project-image-2 {
   background-image: linear-gradient(#f2b544c4, #c2830eba),
     url(/images/server.jfif);
-    height: 300px;
-    width: 300px;
-    background-size: 300px;
+  height: 300px;
+  width: 300px;
+  background-size: 300px;
 }
 .project-image-3 {
   background-image: linear-gradient(#f2b544c4, #c2830eba),
     url(/images/speedy_car.png);
-    height: 300px;
-    width: 300px;
-    background-size: 300px;
+  height: 300px;
+  width: 300px;
+  background-size: 300px;
 }
 
 .project-info {
